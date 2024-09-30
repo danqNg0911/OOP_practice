@@ -1,0 +1,25 @@
+@startuml
+class Person {
+  -String name
+  -short birth
+  +String getName()
+  +void setName(String name)
+  +short getBirth()
+  +void setBirth(short birth)
+}
+
+class Student {
+  -String id
+  +String getId()
+  +void setId(String id)
+}
+
+class Lecturer {
+
+}
+
+Person <|-- Student
+Person <|-- Lecturer
+@enduml
+
+java -jar plantuml.jar diagram.puml
